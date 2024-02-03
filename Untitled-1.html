@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Calendar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="clock-container">
+            <div class="clock" id="clock"></div>
+            <button id="open-event-modal" class="event-modal-button">Add Event</button>
+        </div>
+        <div class="calendar-container">
+            <div class="calendar">
+                <div class="calendar-header">
+                    <button id="prev-month" class="nav-button">&#8249;</button>
+                    <h2 id="current-month-year"></h2>
+                    <button id="next-month" class="nav-button">&#8250;</button>
+                </div>
+                <table class="calendar-table">
+                    <thead>
+                        <tr>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendar-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-event-modal" class="close">&times;</span>
+            <h3 class="event-modal-title">Add Event</h3>
+            <input type="text" id="event-title" class="event-modal-input" placeholder="Event Title">
+            <input type="date" id="event-date" class="event-modal-input">
+            <button id="add-event-btn" class="event-modal-button">Add</button>
+        </div>
+    </div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
